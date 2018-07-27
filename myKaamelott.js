@@ -62,10 +62,5 @@ function start(mode) {
 	})
 
 	global.Devices = Imports.DeviceUtils.loadAllDevices()
-
-	app.get('/', (req, res) => {
-		console.log("Hello chicken !")
-		res.json({t:"t"})
-	})
 	
 }
