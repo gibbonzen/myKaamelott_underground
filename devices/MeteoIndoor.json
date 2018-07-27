@@ -1,0 +1,29 @@
+{
+	"name": "Météo intérieure",
+	"type": "meteo",
+	"mesures": {
+		"temperature": {
+			"unit": "°C"
+		},
+		"humidity": {
+			"unit": "%"
+		}
+	},
+	"routes": [
+		{
+			"root": true,
+			"for": "meteo",
+			"url": "/meteo",
+			"get": true,
+			"socket": true
+		},
+		{
+			"for": "temperature",
+			"url": "/temperature"
+		},
+		{
+			"for": "humidity",
+			"url": "/humidity"
+		}
+	]
+}

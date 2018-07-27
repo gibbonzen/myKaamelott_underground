@@ -1,0 +1,29 @@
+{
+	"name": "myKaamelott_api",
+	"host": "localhost",
+	"ip": "127.0.0.1",
+	"port": 8081,
+	"modules": [
+		[ "express" ],
+		[ "express", "app", "" ],
+		[ "http", "server", "Server", ["app"] ],
+		[ "socket.io", "io", "constructor", ["server"] ],
+		[ "body-parser", "bodyParser"],
+		[ "cors" ],
+		[ "fs" ],
+		[ "path" ],
+		[ "events", "EventEmitter" ],
+		[ "./LOG", "LOG" ],
+		[ "./DeviceFactory", "DeviceFactory" ],
+		[ "./JsonRouter", "JsonRouter" ],
+		[ "./SocketRouter", "SocketRouter" ],
+		[ "./Device", "Device" ],
+		[ "./DeviceUtils", "DeviceUtils" ],
+		[ "./JsonUtils", "JsonUtils" ],
+		[ "./Tools", "Tools" ]
+	],
+	"devices": {
+		"dir": "devices",
+		"load": [ "MeteoIndoor" ]
+	}
+}
