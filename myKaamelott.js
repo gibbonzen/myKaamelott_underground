@@ -51,12 +51,19 @@ function start(mode) {
 	app.use(Imports.bodyParser.json())
 	app.use(Imports.bodyParser.urlencoded({extended: true}))
 
-// SERVER //
+	// SERVER //
 	Imports.server.listen(config.port, "localhost", () => 
 		LOG.server(`Listening on ${config.port}...`, true)
 	)
 
 	// SOCKET //
+	let io = require('socket.io')(Imports.server)
+
+	//console.log(io)
+	console.log("\n---------------\n")
+	console.log(Imports.io)
+
+
 	Imports.io.on('connection', (socket) => {
 		socket.emit("message", "Bonjour")
 	})

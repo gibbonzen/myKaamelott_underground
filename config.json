@@ -7,7 +7,7 @@
 		[ "express" ],
 		[ "express", "app", "" ],
 		[ "http", "server", "Server", ["app"] ],
-		[ "socket.io", "io", "constructor", ["server"] ],
+		[ "socket.io", "io", "", ["server"] ],
 		[ "body-parser", "bodyParser"],
 		[ "cors" ],
 		[ "fs" ],
